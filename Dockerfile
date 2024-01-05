@@ -1,7 +1,5 @@
 FROM ruby:3.2-slim
 
-RUN apk add --no-cache git
-
 RUN set -x && \
     apt-get update && \
     apt-get install -y git && \
