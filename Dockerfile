@@ -1,9 +1,12 @@
-FROM ruby:2.7-alpine
+FROM ruby:3.2-slim
 
 RUN apk add --no-cache git
 
-RUN set -x \
-  && gem install bundler:2.4.22 keycutter
+RUN set -x && \
+    apt-get update && \
+    apt-get install -y git && \
+    rm -rf /var/lib/apt/lists/* && \
+    gem install bundler keycutter
 
 COPY LICENSE README.md /
 
