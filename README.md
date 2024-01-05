@@ -19,7 +19,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build and publish gem
-      uses: jstastny/publish-gem-to-github@master
+      uses: AutoUncle/publish-gem-to-github@master
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         owner: jstastny
